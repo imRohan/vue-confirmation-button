@@ -2,16 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Hello World with Webpack</title>
-    <meta name="author" content="name">
-    <meta name="description" content="description here">
-    <meta name="keywords" content="keywords,here">
+    <title>Vue Confirmation Button</title>
+    <meta name="author" content="Rohan Likhite">
+    <meta name="description" content="Vue Confirmation Button Component Demo">
+    <meta name="keywords" content="Vuejs">
     <link rel="shortcut icon" href="" type="image/vnd.microsoft.icon">
   </head>
   <body>
     <div class="app">
       {{ app.name }}
-      <confirmation-button></confirmation-button>
+      <vue-confirmation-button
+        v-on:confirmation-success="finished()">
+      </vue-confirmation-button>
     </div>
     <script type="text/javascript" src='bundle.js'></script>
   </body>
