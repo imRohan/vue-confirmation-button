@@ -1,0 +1,29 @@
+{
+  "name": "webpack-boilplate",
+  "version": "1.0.0",
+  "description": "A boilerplate with webpack for js module handling and scss loading",
+  "main": "./app/js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --host 0.0.0.0"
+  },
+  "author": "Rohan Likhite <rlikhite@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/imRohan/webpack-boilerplate.git",
+    "type": "git"
+  },
+  "dependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "css-loader": "^0.28.3",
+    "html-loader": "^0.5.1",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.1",
+    "vue": "^2.5.13",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
+  }
+}
