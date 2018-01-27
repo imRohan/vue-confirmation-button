@@ -15,7 +15,8 @@ const demo = new Vue({
     },
     customMessages: [
       'Does this work',
-      'I think so'
+      'I think so',
+      'It does!'
     ],
   },
   components: {
