@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = {
-  entry: './app/js/index.js',
+  entry: './js/index.js',
   output: {
     filename: './bundle.js'
   },
@@ -31,12 +31,20 @@ module.exports = {
         exclude: /node_modules/,
         loaders: 'style-loader!html-loader',
       },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        options: {
+
+        },
+      },
     ],
   },
   resolve: {
     modules: [path.resolve(__dirname, "app"), "node_modules"],
     alias: {
-      vue: 'vue/dist/vue.js'
+      vue: 'vue/dist/vue.js',
+      SRC: path.resolve(__dirname, 'src/')
     },
   }
 };

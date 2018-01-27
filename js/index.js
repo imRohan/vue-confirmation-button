@@ -2,6 +2,7 @@
 import Vue from 'vue'
 
 // Components
+import vueConfirmation from '../src/vue-confirmation-button.vue'
 
 // Vue Plugins
 
@@ -14,6 +15,7 @@ const demo = new Vue({
     },
   },
   components: {
+    'confirmation-button': vueConfirmation,
   },
   computed: {
   },
