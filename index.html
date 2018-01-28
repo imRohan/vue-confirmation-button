@@ -7,13 +7,50 @@
     <meta name="description" content="Vue Confirmation Button Component Demo">
     <meta name="keywords" content="Vuejs">
     <link rel="shortcut icon" href="" type="image/vnd.microsoft.icon">
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      .app {
+        background: #B3B5E7;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      } 
+      .app__green {
+        background: #abd6ac;
+      }
+      .demo__title {
+        color: #ffffff;
+        font-size: 5vw;
+        font-weight: 700;
+        font-family: sans-serif;
+        padding: 5vh 0;
+      }
+      .demo__button {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
   </head>
   <body>
-    <div class="app">
-      {{ app.name }}
-      <vue-confirmation-button
-        v-on:confirmation-success="finished()">
-      </vue-confirmation-button>
+    <div
+      class="app"
+      :class="[confirmed? 'app__green' : '']">
+      <div class="demo__container">
+        <div class="demo__title">
+          Vue Confirmation Button 
+        </div> 
+        <div class="demo__button">
+          <vue-confirmation-button
+            :messages="customMessages"
+            v-on:confirmation-success="finished()">
+          </vue-confirmation-button>
+        </div>
+      </div>
     </div>
     <script type="text/javascript" src='bundle.js'></script>
   </body>

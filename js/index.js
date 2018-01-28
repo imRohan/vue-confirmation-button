@@ -13,10 +13,15 @@ const demo = new Vue({
     app: {
       name: 'vue-confirmation-button-demo',
     },
+    confirmed: false,
     customMessages: [
-      'Does this work',
-      'I think so',
-      'It does!'
+      'Custom Messages',
+      'Can also be added',
+      'How about a long string?',
+      'That works too!',
+      'What about Emoji?',
+      'Yup! 🐒',
+      'Ok!'
     ],
   },
   components: {
@@ -27,8 +32,7 @@ const demo = new Vue({
   methods: {
     finished() {
       console.log('emit caught!')
+      this.confirmed = true
     }
-  },
-  mounted() {
   },
 })

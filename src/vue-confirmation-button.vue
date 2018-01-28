@@ -5,7 +5,7 @@
     class="confirmation-button"
     :class="[
       css? css : '',
-      stepsComplete? 'confirmation-button__complete' : ''
+      stepsComplete? 'confirmation-button--complete' : ''
     ]"
     :disabled='stepsComplete'
     v-on:click='incrementStep()'>
@@ -63,26 +63,38 @@
   .confirmation-button {
     display: block;
     background: #5B64B4;
-    font-size: 0.7em;
+    font-size: 0.8em;
     font-weight: 700;
     color: #ffffff;
-    border-radius: 40px;
-    height: 40px;
-    width: 130px;
+    border-radius: 50px;
+    height: 50px;
+    min-width: 130px;
+    padding: 0em 1em;
     outline: 0;
     cursor: pointer;
     border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0px 6px 54px rgba(71,78,152,0.5);
     -webkit-transition: background 0.3s ease-in,
-                        font-size 0.4s ease-in-out,
-                        width 0.1s linear;
+                        min-width 0.1s linear,
+                        box-shadow 0.2s ease-in;
     transition: background 0.3s ease-in,
-                font-size 0.4s ease-in-out,
-                width 0.1s linear;
+                min-width 0.1s linear,
+                box-shadow 0.2s ease-in;
   }
-  .confirmation-button__complete {
+  .confirmation-button:not(.confirmation-button--complete):hover {
+    box-shadow: 0px 15px 54px rgba(71,78,152,0.7);
+  }
+  .confirmation-button--complete {
     cursor: not-allowed;
     background: #79BA7A;
-    width: 40px;
+    min-width: 50px;
+    padding: 0em;
     font-size: 1em;
+    box-shadow: 0px 6px 54px rgba(104,160,106,0.5);
+    animation: icon-pop 0.3s linear 1;
   } 
+  @keyframes icon-pop{
+      0%   {font-size: 0.1em;}
+      50%  {font-size: 1.8em;}
+  }
 </style>
