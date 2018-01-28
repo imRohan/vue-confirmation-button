@@ -1,16 +1,15 @@
 {
-  "name": "webpack-boilplate",
+  "name": "vue-confirmation-button",
   "version": "1.0.0",
-  "description": "A boilerplate with webpack for js module handling and scss loading",
-  "main": "./app/js/index.js",
+  "description": "A reusable Vuejs component for asking a user for input confirmation",
+  "main": "./src/vue-confirmation-button.vue",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --host 0.0.0.0"
   },
   "author": "Rohan Likhite <rlikhite@gmail.com>",
   "license": "MIT",
   "repository": {
-    "url": "https://github.com/imRohan/webpack-boilerplate.git",
+    "url": "https://github.com/imRohan/vue-confirmation-button",
     "type": "git"
   },
   "dependencies": {

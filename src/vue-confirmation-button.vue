@@ -20,9 +20,8 @@
     data() {
       return {
         defaultSteps: [
-          'Delete',
-          'Are You Sure?',
-          'For real?',
+          'Subscribe',
+          'Confirm Subscription',
           '✔',
         ],
         currentStep: 0,
@@ -44,6 +43,7 @@
       incrementStep() {
         if (this.currentStep !== this.lastMessageIndex) {
           this.currentStep++
+          this.$emit('confirmation-increment')
         }
         else {
           this.confirmationComplete()
@@ -52,8 +52,11 @@
       confirmationComplete() {
         this.stepsComplete = true
         this.currentStep = this.messageList.length - 1
-        console.log('sending emit')
         this.$emit('confirmation-success')
+      },
+      reset() {
+        this.currentStep = 0
+        this.stepsComplete = false
       },
     },
   }
@@ -72,6 +75,7 @@
     padding: 0em 1em;
     outline: 0;
     cursor: pointer;
+    text-transform: capitalize;
     border: 1px solid rgba(255,255,255,0.2);
     box-shadow: 0px 6px 54px rgba(71,78,152,0.5);
     -webkit-transition: background 0.3s ease-in,

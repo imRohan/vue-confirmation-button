@@ -21,7 +21,14 @@ const demo = new Vue({
       'That works too!',
       'What about Emoji?',
       'Yup! 🐒',
+      'View Github Repo',
       'Ok!'
+    ],
+    reset: false,
+    appliedMessages: [
+      'Click to confirm',
+      'Are your sure?',
+      '✔',
     ],
   },
   components: {
@@ -31,8 +38,18 @@ const demo = new Vue({
   },
   methods: {
     finished() {
-      console.log('emit caught!')
       this.confirmed = true
+      if (this.appliedMessages == this.customMessages) {
+        window.open('https://github.com/imRohan/vue-confirmation-button','_blank')
+      }
+    },
+    resetDemo() {
+      demo.$refs.confirmationButton.reset()
+      this.confirmed = false
+    },
+    useCustomMessages() {
+      this.appliedMessages = this.customMessages
+      this.resetDemo()
     }
   },
 })

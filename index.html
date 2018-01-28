@@ -30,9 +30,21 @@
         font-family: sans-serif;
         padding: 5vh 0;
       }
-      .demo__button {
+      .demo__button, .demo__controls {
         display: flex;
         justify-content: center;
+      }
+      .demo__controls {
+        padding-top: 5vh;
+      }
+      .simple-button {
+        outline: 0;
+        margin: 0 5px;
+        border: 1px solid #ffffff;
+        background: none;
+        border-radius: 30px;
+        color: #ffffff;
+        cursor: pointer;
       }
     </style>
   </head>
@@ -46,9 +58,18 @@
         </div> 
         <div class="demo__button">
           <vue-confirmation-button
-            :messages="customMessages"
+            :messages="appliedMessages"
+            ref="confirmationButton"
             v-on:confirmation-success="finished()">
           </vue-confirmation-button>
+        </div>
+        <div class="demo__controls">
+          <button  @click="resetDemo()" class="simple-button">
+            Reset
+          </button>
+          <button  @click="useCustomMessages()" class="simple-button">
+            Custom Messages
+          </button>
         </div>
       </div>
     </div>
