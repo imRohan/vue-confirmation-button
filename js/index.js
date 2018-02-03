@@ -15,8 +15,7 @@ const demo = new Vue({
     },
     confirmed: false,
     customMessages: [
-      'Custom Messages',
-      'Can also be added',
+      'Messages can be set via a prop',
       'How about a long string?',
       'That works too!',
       'What about Emoji?',
@@ -25,11 +24,7 @@ const demo = new Vue({
       'Ok!'
     ],
     reset: false,
-    appliedMessages: [
-      'Click to confirm',
-      'Are your sure?',
-      '✔',
-    ],
+    appliedMessages: null,
   },
   components: {
     'vue-confirmation-button': vueConfirmation,

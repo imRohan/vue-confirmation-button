@@ -2,10 +2,9 @@
 
 <template>
   <button
-    class="confirmation-button"
     :class="[
-      css? css : '',
-      stepsComplete? 'confirmation-button--complete' : ''
+      css? css : 'confirmation__button',
+      stepsComplete? 'confirmation__button--complete' : ''
     ]"
     :disabled='stepsComplete'
     v-on:click='incrementStep()'>
@@ -20,8 +19,8 @@
     data() {
       return {
         defaultSteps: [
-          'Subscribe',
-          'Confirm Subscription',
+          'Click to confirm',
+          'Are you sure?',
           '✔',
         ],
         currentStep: 0,
@@ -63,7 +62,7 @@
 </script>
 
 <style>
-  .confirmation-button {
+  .confirmation__button {
     display: block;
     background: #5B64B4;
     font-size: 0.8em;
@@ -85,10 +84,10 @@
                 min-width 0.1s linear,
                 box-shadow 0.2s ease-in;
   }
-  .confirmation-button:not(.confirmation-button--complete):hover {
+  .confirmation__button:not(.confirmation__button--complete):hover {
     box-shadow: 0px 15px 54px rgba(71,78,152,0.7);
   }
-  .confirmation-button--complete {
+  .confirmation__button.confirmation__button--complete {
     cursor: not-allowed;
     background: #79BA7A;
     min-width: 50px;
@@ -96,8 +95,8 @@
     font-size: 1em;
     box-shadow: 0px 6px 54px rgba(104,160,106,0.5);
     animation: icon-pop 0.3s linear 1;
-  } 
-  @keyframes icon-pop{
+  }
+  @keyframes icon-pop {
       0%   {font-size: 0.1em;}
       50%  {font-size: 1.8em;}
   }
