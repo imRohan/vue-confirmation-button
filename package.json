@@ -2,15 +2,26 @@
   "name": "vue-confirmation-button",
   "version": "1.0.0",
   "description": "A reusable Vuejs component for asking a user for input confirmation",
-  "main": "./src/vue-confirmation-button.vue",
+  "main": "src/vue-confirmation-button.vue",
   "scripts": {
     "dev": "webpack-dev-server --host 0.0.0.0"
   },
   "author": "Rohan Likhite <rlikhite@gmail.com>",
   "license": "MIT",
   "repository": {
-    "url": "https://github.com/imRohan/vue-confirmation-button",
-    "type": "git"
+    "type": "git",
+    "url": "git+https://github.com/imRohan/vue-confirmation-button.git"
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "component",
+    "confirmation",
+    "button",
+    "ui"
+  ],
+  "bugs": {
+    "url": "https://github.com/imRohan/vue-confirmation-button/issues"
   },
   "dependencies": {
     "babel-core": "^6.24.1",
