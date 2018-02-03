@@ -4,7 +4,7 @@
 import Vue from 'vue'
 
 // Components
-import vueConfirmation from '../src/vue-confirmation-button.vue'
+import vueConfirmation from '../dist/vue-confirmation-button.vue'
 
 // VueJS Mount
 const demo = new Vue({
