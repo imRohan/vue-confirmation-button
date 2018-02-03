@@ -66,11 +66,7 @@ e.g.:
 In your template:
 
 ```html
-<vue-confirmation-button
-  :messages="customMessages"
-  ref="confirmationButton"
-  v-on:confirmation-success="finished()">
-</vue-confirmation-button>
+<vue-confirmation-button ref="confirmationButton"></vue-confirmation-button>
 ```
 
 In your method:
