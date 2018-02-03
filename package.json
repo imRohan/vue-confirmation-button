@@ -2,7 +2,7 @@
   "name": "vue-confirmation-button",
   "version": "1.0.0",
   "description": "A reusable Vuejs component for asking a user for input confirmation",
-  "main": "src/vue-confirmation-button.vue",
+  "main": "dist/vue-confirmation-button.vue",
   "scripts": {
     "dev": "webpack-dev-server --host 0.0.0.0"
   },
