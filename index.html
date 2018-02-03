@@ -11,6 +11,7 @@
       body {
         padding: 0;
         margin: 0;
+        font-family: sans-serif;
       }
       .app {
         background: #B3B5E7;
@@ -27,7 +28,6 @@
         color: #ffffff;
         font-size: 5vw;
         font-weight: 700;
-        font-family: sans-serif;
         padding: 5vh 0;
       }
       .demo__button, .demo__controls {
@@ -45,6 +45,20 @@
         border-radius: 30px;
         color: #ffffff;
         cursor: pointer;
+        font-size: 1em;
+      }
+      .credits {
+        position: absolute;
+        display: block;
+        bottom: 0;
+        right: 0;
+        text-align: right;
+        font-weight: 700;
+        padding: 1em;
+      }
+      .credits > a {
+        text-decoration: none;
+        color: #ffffff;
       }
     </style>
   </head>
@@ -71,6 +85,11 @@
             Custom Messages
           </button>
         </div>
+      </div>
+      <div class="credits">
+        <a href="https://www.rohanlikhite.com">
+          Made with love by Rohan
+        </a>
       </div>
     </div>
     <script type="text/javascript" src='bundle.js'></script>
