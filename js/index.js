@@ -17,7 +17,7 @@ const demo = new Vue({
     customMessages: [
       'Messages can be set via a prop',
       'How about a long string?',
-      'That works too!',
+      'That most certainly works. Click again!',
       'What about Emoji?',
       'Yup! 🐒',
       'View Github Repo',
