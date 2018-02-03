@@ -2,10 +2,7 @@
 
 <template>
   <button
-    :class="[
-      css? css : 'confirmation__button',
-      stepsComplete? 'confirmation__button--complete' : ''
-    ]"
+    :class="[ css, stepsComplete? 'confirmation__button--complete' : '' ]"
     :disabled='stepsComplete'
     v-on:click='incrementStep()'>
       {{ currentMessage }}
@@ -15,7 +12,13 @@
 <script>
   export default {
     name: 'vue-confirmation-button',
-    props: ['messages', 'css'],
+    props: {
+      messages: Array,
+      css: {
+        type: String,
+        default: 'confirmation__button'
+      },
+    },
     data() {
       return {
         defaultSteps: [
@@ -24,7 +27,6 @@
           '✔',
         ],
         currentStep: 0,
-        stepsComplete: false,
       }
     },
     computed: {
@@ -35,27 +37,26 @@
         return this.messageList[this.currentStep]
       },
       lastMessageIndex() {
-        return this.messageList.length - 2
+        return this.messageList.length - 1
+      },
+      stepsComplete() {
+        return this.currentStep === this.lastMessageIndex
       }
     },
     methods: {
       incrementStep() {
-        if (this.currentStep !== this.lastMessageIndex) {
-          this.currentStep++
-          this.$emit('confirmation-increment')
+        this.currentStep++
+        if (this.stepsComplete) {
+          this.$emit('confirmation-success')
         }
         else {
-          this.confirmationComplete()
+          this.$emit('confirmation-incremented')
         }
-      },
-      confirmationComplete() {
-        this.stepsComplete = true
-        this.currentStep = this.messageList.length - 1
-        this.$emit('confirmation-success')
       },
       reset() {
         this.currentStep = 0
         this.stepsComplete = false
+        this.$emit('confirmation-reset')
       },
     },
   }
