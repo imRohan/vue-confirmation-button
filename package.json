@@ -4,7 +4,8 @@
   "description": "A reusable Vuejs component for asking a user for input confirmation",
   "main": "dist/vue-confirmation-button.vue",
   "scripts": {
-    "dev": "webpack-dev-server --host 0.0.0.0"
+    "dev": "webpack-dev-server --host 0.0.0.0 --config ./webpack.development.config.js",
+    "prod": "webpack -p --config ./webpack.production.config.js"
   },
   "author": "Rohan Likhite <rlikhite@gmail.com>",
   "license": "MIT",
@@ -27,15 +28,18 @@
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-preset-es2015": "^6.24.1",
+    "copy-webpack-plugin": "^4.3.1",
     "css-loader": "^0.28.3",
     "html-loader": "^0.5.1",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.1",
+    "uglifyjs-webpack-plugin": "^1.1.8",
     "vue": "^2.5.13",
     "vue-loader": "^13.7.0",
     "vue-template-compiler": "^2.5.13",
-    "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.9.1"
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.1",
+    "webpack-merge": "^4.1.1"
   }
 }

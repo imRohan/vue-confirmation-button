@@ -1,11 +1,10 @@
-const path = require('path')
+const path = require('path');
 
 module.exports = {
-  entry: './js/index.js',
+  entry: ['./js/index.js'],
   output: {
     filename: './bundle.js'
   },
-  watch: true,
   module: {
     rules: [
       {
@@ -13,7 +12,9 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
-          presets: ['es2015']
+          presets: [
+            ['es2015', { "modules": false }]
+          ]
         },
       },
       {
@@ -34,16 +35,12 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader',
-        options: {
-
-        },
       },
     ],
   },
   resolve: {
     modules: [path.resolve(__dirname, "app"), "node_modules"],
     alias: {
-      vue: 'vue/dist/vue.js',
       SRC: path.resolve(__dirname, 'src/')
     },
   }
