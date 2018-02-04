@@ -1,7 +1,8 @@
-![demoGif](https://i.imgur.com/zM0vitr.gif)
 ## VueConfirmationButton
 
 A Vue.js [single file component](https://vuejs.org/v2/guide/single-file-components.html) that will generate a button that requires the user to press it multiple times in order to confirm a designated action
+
+![demoGif](https://i.imgur.com/zM0vitr.gif)
 
 ### Why would i need that?
 
