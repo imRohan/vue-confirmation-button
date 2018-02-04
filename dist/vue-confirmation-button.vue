@@ -55,7 +55,6 @@
       },
       reset() {
         this.currentStep = 0
-        this.stepsComplete = false
         this.$emit('confirmation-reset')
       },
     },
