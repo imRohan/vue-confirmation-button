@@ -1,20 +1,26 @@
 ![demoGif](https://i.imgur.com/zM0vitr.gif)
 ## VueConfirmationButton
 
-A VueJS (2.x) button component that requires the user to press it a few times
-
-### What is this?
-
-A component that will generate a button that requires the user to press it multiple times in order to confirm a designated action
+A Vue.js [single file component](https://vuejs.org/v2/guide/single-file-components.html) that will generate a button that requires the user to press it multiple times in order to confirm a designated action
 
 ### Why would i need that?
 
 Think of a sensitive scenario, something like deleting data. Having the user read multiple warning messages before performing an action will help prevent unwanted deletions.
 
+## Demo
+
+[Live Demo](http://rohanlikhite.com/projects/vueConfirmationButton/)
+
 ## Install
 
+#### Yarn
 
-## Example
+`yarn add vue-confirmation-button`
+
+#### Manual
+
+Manually download the .vue component (located in the dist) folder and add that to your project. 
+
 
 #### JS
 
@@ -51,6 +57,7 @@ const demo = new Vue({
   </vue-confirmation-button>
 </div>
 ```
+## Details
 
 ### Props
 
