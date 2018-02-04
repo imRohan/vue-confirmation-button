@@ -70,7 +70,7 @@ This component emits 3 events
 
 1. *confirmation-success*: The user has clicked the button all the way through and has successfully confirmed the action
 2. *confirmation-incremented*: Fired everytime the user clicks the button
-3. *confirmation-reset*: The button has been reset (see above for example)
+3. *confirmation-reset*: The button has been reset (see below)
 
 Also there's a `reset` method in case you need to reset your button status. To use it you'll need to add a `ref` to your button and call it from there.
 
