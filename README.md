@@ -7,8 +7,6 @@ A Vue.js [single file component](https://vuejs.org/v2/guide/single-file-componen
 
 Think of a sensitive scenario, something like deleting data. Having the user read multiple warning messages before performing an action will help prevent unwanted deletions.
 
-## Demo
-
 [Live Demo](http://rohanlikhite.com/projects/vueConfirmationButton/)
 
 ## Install
