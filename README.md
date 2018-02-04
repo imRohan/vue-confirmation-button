@@ -64,6 +64,14 @@ This component supports 2 props
 1. *messages*: An array of strings that will be displayed to the user. The last message being shown after confirmation has succeeded
 2. *css*: A string representing the css style that will be applied to the `<button>` element
 
+### Events
+
+This component emits 3 events
+
+1. *confirmation-success*: The user has clicked the button all the way through and has successfully confirmed the action
+2. *confirmation-incremented*: Fired everytime the user clicks the button
+3. *confirmation-reset*: The button has been reset (see above for example)
+
 Also there's a `reset` method in case you need to reset your button status. To use it you'll need to add a `ref` to your button and call it from there.
 
 e.g.:
@@ -83,13 +91,10 @@ resetButton() {
 },
 ```
 
-### Events
+## Credits
 
-This component emits 3 events
-
-1. *confirmation-success*: The user has clicked the button all the way through and has successfully confirmed the action
-2. *confirmation-incremented*: Fired everytime the user clicks the button
-3. *confirmation-reset*: The button has been reset (see above for example)
+Design inspiration: [Simple button animation with final check
+by Anna Ida D'Alessandro](https://dribbble.com/shots/4083243-Simple-button-animation-with-final-check)
 
 
 ## MIT License
