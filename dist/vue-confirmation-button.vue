@@ -2,7 +2,7 @@
 
 <template>
   <button
-    :class="[ css, stepsComplete? 'confirmation__button--complete' : '' ]"
+    :class="[ css, stepsComplete? 'confirmation__button--complete' : '', 1 == currentStep? 'confirmation__button--waiting' : '' ]"
     :disabled='stepsComplete'
     v-on:click='incrementStep()'>
       {{ currentMessage }}
