@@ -31,7 +31,7 @@
     "copy-webpack-plugin": "^4.3.1",
     "css-loader": "^0.28.3",
     "html-loader": "^0.5.1",
-    "node-sass": "^4.5.3",
+    "node-sass": "^7.0.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.1",
     "uglifyjs-webpack-plugin": "^1.1.8",
